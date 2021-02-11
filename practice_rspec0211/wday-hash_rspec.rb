@@ -22,13 +22,9 @@ describe  do
     expect(wday.size).to eq 7
   end
 
-  it "曜日の配列に応じてメッセージを出す" do
-    ary = %w(sunday monday tuesday wedensday thursday friday saturday)
-    result = {}
-    result = ary.each do |day|
-      puts "#{day}は#{wday[day]}です"
+  it "曜日の配列にごとにメッセージを出す" do
+    ary = %i(sunday monday tuesday wedensday thursday friday saturday)
+    expect(main(ary)).to include("mondayは月曜日です")
     end
 
-    expect(result).to include("sundayは日曜日です")
-  end
 end

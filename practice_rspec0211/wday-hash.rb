@@ -1,4 +1,4 @@
-wday = {
+WDAY = {
     sunday: "日曜日",
     monday: "月曜日",
     tuesday: "火曜日",
@@ -7,9 +7,16 @@ wday = {
     friday: "金曜日",
     saturday: "土曜日",
 }
-ary = %w(sunday monday tuesday wedensday thursday friday saturday)
-ary.each do |day|
-  puts "#{day}は#{wday[day]}です"
+
+ARY = %i(sunday monday tuesday wedensday thursday friday saturday)
+def hash_message(ary)
+  result = []
+  ary.each do |day|
+    w =   "#{day}は#{WDAY[day]}です"
+    result << w
+  end
+  result
 end
-
-
+def main(arg)
+   hash_message(arg)
+end
