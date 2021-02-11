@@ -20,3 +20,13 @@ end
 def main(arg)
    hash_message(arg)
 end
+
+def create_hash(str)
+  hash = Hash.new()
+  ary = str.split(/\s+/)
+  while key = ary.shift
+    value = ary.shift
+    hash[key] = value
+  end
+  return hash
+end

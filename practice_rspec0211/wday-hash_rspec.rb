@@ -25,6 +25,10 @@ describe  do
   it "曜日の配列にごとにメッセージを出す" do
     ary = %i(sunday monday tuesday wedensday thursday friday saturday)
     expect(main(ary)).to include("mondayは月曜日です")
-    end
+  end
+  it "文字列から配列を作る" do
+    str ="bule 青 white 白 red 赤"
+    expect(create_hash(str)).to include("bule" => "青")
+  end
 
 end
